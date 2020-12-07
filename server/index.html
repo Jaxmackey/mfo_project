@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title>chat</title>
+    <style>
+      html{
+        overflow: hidden;
+      }
+      .chat-body{
+        overflow-y: scroll;
+        height: 20em;
+      }
+      .chat-footer{
+        border-top: 1px solid black;
+      }
+      .chat-msg-input{
+        margin-left: 0.5em;
+        margin-top: 0.5em;
+      }
+      .chat-send-button{
+        margin-left: 1.1em;
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/1786cf1c2b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+    <header id="header-btn">
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <span style="color: seashell; caret-color: transparent;">Напишите сообщение оператору.</span>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div class="container">
+          <div class="row chat-body">
+          </div>
+          <div class="row chat-footer" >
+            <form class="form-inline">
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control chat-msg-input" id="inputMsg" placeholder="Введите сообщение">
+              </div>
+              <button id="btnSend" type="submit" class="btn btn-sm btn-outline-secondary chat-send-button">Отправить</button>
+            </form>
+          </div>
+          <i class="fas fa-paperclip"></i>
+        </div>
+    </main>
+    <script>
+      window.onload = function(){
+        var btsSend = document.getElementById('btnSend');
+        btsSend.addEventListener('click', function() {
+            var inputMsg = document.getElementById('inputMsg');
+            socket.emit('chat message', inputMsg.value);
+         }, false);
+      }
+    </script>
+  </body>
+</html>
