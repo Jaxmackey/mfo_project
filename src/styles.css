@@ -1,2 +1,206 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.heading {
+  padding: 40px 0 !important;
+}
+
+h1 {
+  text-align: left;
+  font-weight: 700 !important;
+  font-style: 42px !important;
+  margin-bottom: 25px;
+}
+
+h2 {
+  text-align: left;
+  font-weight: 300;
+  font-size: 24px;
+  max-width: 520px;
+}
+
+.banner {
+  min-height: calc(100vh - 65px);
+  background: url(assets/images/money.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner .container {
+  align-items: center;
+  height: 100%;
+}
+
+.banner .container .butt {
+  margin-top: 25px;
+}
+
+.butt {
+  display: inline-flex;
+  padding: 0 20px;
+  height: 56px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.3s;
+  outline: 0;
+  border: 0;
+  background: #ffc75b;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.item-photo {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 15px;
+}
+
+.butt--center {
+  margin: 0 auto;
+}
+
+.item-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.item-wrapper .butt {
+  margin-top: 15px;
+}
+
+.butt:hover {
+  background: #ce911a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.item {
+  border: 1px solid #ededed;
+  box-shadow: 0;
+  transition: 0.3s;
+  background: #fff;
+  width: calc(33.33% - 10px);
+  margin: 5px 0;
+  padding-bottom: 25px;
+}
+
+.item:hover {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.34);
+}
+
+.item.active {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 0px 32px 0px rgba(185, 128, 14, 0.84);
+  box-shadow: 0px 0px 32px 0px rgba(185, 128, 14, 0.84);
+}
+
+.item-title {
+  padding: 0 30px 5px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.item-list {
+  padding: 15px 30px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.item-wrapper::-webkit-scrollbar {
+  width: 3px;
+  background-color: #e1e7e5;
+}
+
+.item-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffc75b;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.item-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #ce911a;
+}
+
+.item-list li {
+  margin: 5px 0;
+  font-size: 16px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.item-list li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #ce911a;
+  left: 0;
+  top: 8px;
+}
+
+.advantages-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 80px 0;
+}
+
+.advantages-item {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.advantages-icon {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.advantages-icon img {
+  max-width: 100%;
+}
+
+.advantages-text {
+  font-weight: 600;
+  font-size: 26px;
+}
